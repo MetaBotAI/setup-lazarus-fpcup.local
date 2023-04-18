@@ -18,29 +18,29 @@ jobs:
       fail-fast: false
       matrix:
         config:            
-          - name: Windows 64
-            os: windows-latest
-            args: --os=win64 --cpu=x86_64
+          # - name: Windows 64
+          #   os: windows-latest
+          #   args: --os=win64 --cpu=x86_64
             
-          - name: Windows 32  
-            os: windows-latest
-            args: --os=win32 --cpu=i386
+          # - name: Windows 32  
+          #   os: windows-latest
+          #   args: --os=win32 --cpu=i386
 
           - name: Linux 64
-            os: ubuntu-latest
+            os: self-hosted
             args: --os=linux --cpu=x86_64
             
-          - name: Linux (aarch64)  
-            os: ubuntu-latest
-            args: --os=linux --cpu=aarch64
+          # - name: Linux (aarch64)  
+          #   os: ubuntu-latest
+          #   args: --os=linux --cpu=aarch64
             
-          - name: MacOS 64
-            os: macos-latest
-            args: --os=darwin --cpu=x86_64 --widgetset=cocoa
+          # - name: MacOS 64
+          #   os: macos-latest
+          #   args: --os=darwin --cpu=x86_64 --widgetset=cocoa
  
-          - name: MacOS (aarch64)
-            os: macos-latest
-            args: --os=darwin --cpu=aarch64 --widgetset=cocoa 
+          # - name: MacOS (aarch64)
+          #   os: macos-latest
+          #   args: --os=darwin --cpu=aarch64 --widgetset=cocoa 
             
     steps:
       - uses: actions/checkout@v3.1.0         
