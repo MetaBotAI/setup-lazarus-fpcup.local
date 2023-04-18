@@ -1,3 +1,5 @@
+Foo
+
 Action which builds FPC and Lazarus using [fpcup](https://github.com/LongDirtyAnimAlf/Reiniero-fpcup). Useful for building projects with custom FPC & Lazarus versions.
 
 Supported platforms:
