@@ -43,6 +43,14 @@ jobs:
           #   args: --os=darwin --cpu=aarch64 --widgetset=cocoa 
             
     steps:
+      - name: 'Cleanup build folder'
+        run: |
+          ls -la ./
+          rm -rf ./* || true
+          rm -rf ./.??* || true
+          ls -la ./
+      - uses: actions/checkout@v3.1.0
+
       - uses: actions/checkout@v3.1.0         
       - name: Install Lazarus
         uses: ./
