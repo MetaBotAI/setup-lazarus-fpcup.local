@@ -1,0 +1,31 @@
+{
+  "name": "setup-lazarus-fpcup",
+  "version": "1.0.0",
+  "description": "Build and cache Lazarus on a Github Actions workflow using fpcup.",
+  "main": "dist/index/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build source/main.js -o dist/index && ncc build source/post.js -o dist/post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ollydev/setup-lazarus-fpcup.git"
+  },
+  "author": "ollydev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ollydev/setup-lazarus-fpcup/issues"
+  },
+  "homepage": "https://github.com/ollydev/setup-lazarus-fpcup#readme",
+  "dependencies": {
+    "@actions/cache": "^1.0.11",
+    "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
+    "@actions/tool-cache": "^1.7.2",
+    "path": "^0.12.7",
+    "process": "^0.11.10"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.31.1"
+  }
+}

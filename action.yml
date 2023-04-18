@@ -1,0 +1,19 @@
+name: 'Setup Lazarus - fpcup'
+description: 'Setup Lazarus using fpcup'
+inputs:
+  laz: 
+    description: 'Lazarus GitLab branch or commit to install'
+    required: true
+  fpc: 
+    description: 'FPC GitLab branch or commit to install'
+    required: true
+  fpcup:
+    description: 'fpcup version to use: https://github.com/LongDirtyAnimAlf/Reiniero-fpcup/releases'
+    required: false
+    default: 'v2.2.0q'
+runs:
+  using: 'node16'
+  main: 'dist/index/index.js'
+  post: 'dist/post/index.js'
+  post-if: env.SAVE_CACHE_KEY != ''
+
